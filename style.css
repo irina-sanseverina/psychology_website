@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+#main-section{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: flex-start;
+	background: url(/Img/Main_abstr2.jpg) no-repeat;
+	/* background-color: lightgray; */
+	background-size: cover;
+	background-position: center;
+	
+}
+header {
+	position: relative;
+	top: 0;
+	width: 100%;
+	padding: 30px 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	}
+header .logo{
+	position: relative;
+	font-size: 30px;
+	color: #581845;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	
+}
+
+header .navigation a{
+	color: #000;
+	text-decoration: none;
+	padding: 5px 15px;
+	border-radius: 10px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	transition: 0.3s;
+	transition-property: background;
+	position: relative;
+	top: 0;
+}
+header .navigation a:not(:last-child){
+	margin-right: 30px;
+}
+header .navigation a:hover {
+	background-color: #fdfffe;
+	/* color: rgba(3, 2, 44, 0.671); */
+	transition-duration: 500ms;
+	top: 2px;
+}
+.content{
+	margin: 70px 50px;
+	/* max-width: 850px; */
+	/* backdrop-filter: blur(5px); */
+}
+
+/* анімаційний заголовок */
+
+.content .info h2{
+	color: rgba(3, 2, 44, 0.671);
+	font-size: 55px;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 2px;
+	line-height: 60px;
+	margin-bottom: 30px;
+	position: relative;
+	/* animation-name: animation-main-text;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-direction: reverse;
+	left: 0;
+}
+@keyframes animation-main-text{
+	0%{
+		left:0;
+	}
+	50%{
+		left: 50%;
+
+	} */
+}
+.content .info h2 span{
+	color: rgb(179, 164, 231);
+	font-size: 50px;
+	font-weight: 600;
+	
+}
+.content .info p{
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 40px;
+}
+.content .info-btn{
+	color: #fff;
+	background:#20648F;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 15px;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	border-radius: 10px;
+	box-shadow: 0 5px 0px #3c354a;
+	transition-duration: 500ms;
+	position: relative;
+	top: 0;
+}
+.content .info-btn:hover{
+	background-color: #18b5a4;
+	top: 2px;
+}
+
+.media-icons{
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	/* flex-direction: column; */
+}
+.media-icons a{
+	position: relative;
+	color: #20648F;
+	font-size: 25px;
+	transition: .3s;
+	transition-property: transform;
+}
+.media-icons a:not(:last-child){
+	margin-right: 60px;
+}
+.media-icons a:hover{
+	transform: scale(1.5);
+}
+label{
+	display: none;
+}
+#check{
+	z-index: 3;
+	display: none;
+}
+
+
+
+/* Responsive style */
+
+
+@media (max-width: 900px){
+	header .navigation{
+		display: none;
+	}
+	label{
+		display: block;
+		font-size: 25px;
+		cursor: pointer;
+		transition: 0.3s;
+		transition-property: color;
+	}
+	label:hover{
+		color: #fff;
+	}
+	label .close-btn{
+		display: none;
+	}
+
+	#check:checked ~ header .navigation{
+		z-index: 2;
+		position: fixed;
+		background: rgba(114, 223, 255, 0.9);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		}
+	#check:checked ~ header .navigation a{
+		font-size: 700;
+		margin-right: 0;
+		margin-bottom: 50px;
+		letter-spacing: 2px;
+		}
+	#check:checked ~ header label .menu-btn{
+		display: none;
+	}
+
+	#check:checked ~ header label .close-btn{
+		z-index: 2;
+		display: block;
+		position: fixed;
+	}
+
+	label .menu-btn{
+		position: absolute;
+	}
+	header .logo{
+		position: absolute;
+		bottom: -4px;
+	}
+	.content .info h2{
+		font-size: 45px;
+		line-height: 50px;
+	}
+	.content	.info h2 span{
+		font-size: 40px;
+		font-weight: 600;
+	}
+	.content .info p{
+		font-size: 14px;
+	}
+}
+@media (max-width: 560px){
+	.content .info h2{
+		font-size: 35px;
+		line-height: 40px;
+	}
+	.content	.info h2 span{
+		font-size: 30px;
+		font-weight: 600;
+		
+	}
+	.content .info p{
+		font-size: 14px;
+	}
+}
+
+#about-section{
+	position: relative;
+	width: 100%;
+	/* min-height: 100vh; */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-size: cover;
+	background-position: center;
+	
+}
+
+#work-with-section .grid-work-with{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin: 20px 50px;
+	border-radius: 20px;
+	justify-items: center;
+	box-shadow: inset 3px 3px 5px 5px #fff;
+	padding: 10px;
+}
+.image{
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px 1px lightgray;
+	
+}
+#about-section .content h3{
+	margin: 10px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+#work-with-section h3{
+	margin: 10px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+	
+#work-with-section .grid-work-with h4{
+	margin: 30px 10px;
+	text-align: center;
+	
+}
+
+#work-with-section .grid-work-with img{
+	width: 100%;
+	max-width: 250px;
+	
+}
+
+
+
+
+/*Блок з ціною*/
+
+
+
+#price-section .price{
+	display: grid;
+	grid-template-columns: 8fr 1fr;
+	padding: 10px;
+}
+
+#price-section h3{
+	margin-top: 50px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+
+
+/*	--------- FOOTER  ------------- */
+
+
+
+
+
+
+footer{
+	background-color: rgba(3, 2, 44, 0.671);
+	color: #fff;
+	line-height: 25px;
+	font-size: 15px;
+}
+
+footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 10px;
+	letter-spacing: 1px;
+	padding: 20px;
+	word-spacing: 3px;
+}
+/*
+#adress-section .adress .contacts {
+	display: flex;
+	flex-direction: column;
+}
+#adress-section .adress .contacts a{
+	text-decoration: none;
+	color: #fff;
+} 
+#adress-section .adress .contacts-social a{
+	text-decoration: none;
+	color: #fff;
+} 
+#adress-section .adress .contacts, .contacts-social{
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+ */
