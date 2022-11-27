@@ -15,7 +15,7 @@
 	flex-direction: column;
 	min-height: 100vh;
 	justify-content: flex-start;
-	background: url(/Img/Main_abstr2.jpg) no-repeat;
+	background: url(/psychology_website/Img/Main_abstr3.jpg) no-repeat;
 	/* background-color: lightgray; */
 	background-size: cover;
 	background-position: center;
@@ -44,7 +44,7 @@ header .navigation a{
 	color: #000;
 	text-decoration: none;
 	padding: 5px 15px;
-	border-radius: 10px;
+	border-radius: 15px;
 	font-weight: 800;
 	letter-spacing: 1px;
 	transition: 0.3s;
@@ -56,10 +56,12 @@ header .navigation a:not(:last-child){
 	margin-right: 30px;
 }
 header .navigation a:hover {
-	background-color: #fdfffe;
-	/* color: rgba(3, 2, 44, 0.671); */
+	/* background-color: #5FBBFD; */
+	
+	border: 1px solid #000;
 	transition-duration: 500ms;
-	top: 2px;
+	top: -1px;
+	box-shadow: 5px 10px 18px #888888:
 }
 .content{
 	margin: 70px 50px;
@@ -79,20 +81,20 @@ header .navigation a:hover {
 	margin-bottom: 30px;
 	position: relative;
 	/* animation-name: animation-main-text;
-	animation-duration: 1s;
+	animation-duration: 3s;
 	animation-timing-function: linear;
 	animation-direction: reverse;
-	left: 0;
+	left: 0; */
 }
-@keyframes animation-main-text{
+/* @keyframes animation-main-text{
 	0%{
 		left:0;
 	}
 	50%{
 		left: 50%;
 
-	} */
-}
+	}
+} */
 .content .info h2 span{
 	color: rgb(179, 164, 231);
 	font-size: 50px;
