@@ -19,8 +19,8 @@
 	/* background-color: lightgray; */
 	background-size: cover;
 	background-position: center;
-	
 }
+
 header {
 	position: relative;
 	top: 0;
@@ -41,7 +41,7 @@ header .logo{
 }
 
 header .navigation a{
-	color: #000;
+	color: #581845;
 	text-decoration: none;
 	padding: 5px 15px;
 	border-radius: 15px;
@@ -58,15 +58,13 @@ header .navigation a:not(:last-child){
 header .navigation a:hover {
 	/* background-color: #5FBBFD; */
 	
-	border: 1px solid #000;
+	/* border: 1px solid #000; */
 	transition-duration: 500ms;
 	top: -1px;
-	box-shadow: 5px 10px 18px #888888:
+	box-shadow: 0px 0px 5px rgba(3, 2, 44, 0.671);
 }
 .content{
 	margin: 70px 50px;
-	/* max-width: 850px; */
-	/* backdrop-filter: blur(5px); */
 }
 
 /* анімаційний заголовок */
@@ -126,12 +124,6 @@ header .navigation a:hover {
 	top: 2px;
 }
 
-.media-icons{
-	display: flex;
-	justify-content: center;
-	margin: auto;
-	/* flex-direction: column; */
-}
 .media-icons a{
 	position: relative;
 	color: #20648F;
@@ -170,7 +162,7 @@ label{
 		transition-property: color;
 	}
 	label:hover{
-		color: #fff;
+			color: #20648F; 
 	}
 	label .close-btn{
 		display: none;
@@ -179,7 +171,8 @@ label{
 	#check:checked ~ header .navigation{
 		z-index: 2;
 		position: fixed;
-		background: rgba(114, 223, 255, 0.9);
+		/* background: rgba(114, 223, 255, 0.9); */
+		background: #fff;
 		top: 0;
 		bottom: 0;
 		left: 0;
@@ -192,8 +185,9 @@ label{
 	#check:checked ~ header .navigation a{
 		font-size: 700;
 		margin-right: 0;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 		letter-spacing: 2px;
+		text-shadow: 1px 1px 1px #000;
 		}
 	#check:checked ~ header label .menu-btn{
 		display: none;
@@ -251,42 +245,89 @@ label{
 	
 }
 
-#work-with-section .grid-work-with{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	margin: 20px 50px;
-	border-radius: 20px;
-	justify-items: center;
-	box-shadow: inset 3px 3px 5px 5px #fff;
-	padding: 10px;
-}
-.image{
-	border-radius: 10px;
-	box-shadow: 5px 5px 10px 1px lightgray;
-	
-}
 #about-section .content h3{
 	margin: 10px;
 	text-align: center;
 	letter-spacing: 2px;
 }
+
+
+
+
+
+
+
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	border: #000 solid 2px;
+}
+@media (max-width: 1200px){
+	.container{
+		max-width: 970px;
+	}
+}
+@media (max-width: 992px){
+	.container{
+		max-width: 950;
+		
+	}
+}
+@media (max-width: 967px){
+	.container{
+		max-width: none;
+	}
+}
+
+
+
 #work-with-section h3{
 	margin: 10px;
 	text-align: center;
 	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.grid-work-with{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	justify-content: space-between;
+	grid-column-gap: 1rem;
+	margin: 0	30px;
+}
+
+
+/* #work-with-section .conteiner .grid-work-with{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	margin: 20px auto;
+	border-radius: 20px;
+	justify-items: center;
+	box-shadow: inset 3px 3px 5px 5px #fff;
+	padding: 10px; 
+}*/
+.image{
+	border-radius: 10px;
+	box-shadow: 5px 0px 10px 1px lightgray;
+	
 }
 	
 #work-with-section .grid-work-with h4{
-	margin: 30px 10px;
+	margin: 30px auto;
 	text-align: center;
 	
 }
 
-#work-with-section .grid-work-with img{
-	width: 100%;
-	max-width: 250px;
-	
-}
+
+
+
+
+
+
+
 
 
 
@@ -323,7 +364,7 @@ footer{
 	font-size: 15px;
 }
 
-footer{
+footer .social-icons{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -332,6 +373,18 @@ footer{
 	letter-spacing: 1px;
 	padding: 20px;
 	word-spacing: 3px;
+	flex-wrap: wrap;
+}
+
+footer .social-icons li{
+	list-style: none;
+}
+footer .social-icons li a{
+	font-size: 18px;
+	color: #fff;
+	margin-right: 10px;
+	
+	
 }
 /*
 #adress-section .adress .contacts {
