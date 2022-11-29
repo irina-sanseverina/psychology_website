@@ -15,7 +15,8 @@
 	flex-direction: column;
 	min-height: 100vh;
 	justify-content: flex-start;
-	background: url(/psychology_website/Img/Main_abstr3.jpg) no-repeat;
+	background: url('') no-repeat;
+	;
 	/* background-color: lightgray; */
 	background-size: cover;
 	background-position: center;
@@ -291,13 +292,13 @@ label{
 }
 #work-with-section .grid-work-with{
 	/* border: solid #000 1px; */
-	margin: 50px;
+	/* margin: 50px; */
 	padding: 30px;
 }
 
 #work-with-section .grid-work-with{
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	justify-items: center;
 	grid-column-gap: 2rem;
 
