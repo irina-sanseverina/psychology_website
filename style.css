@@ -223,6 +223,7 @@ label{
 	.content .info h2{
 		font-size: 35px;
 		line-height: 40px;
+		
 	}
 	.content	.info h2 span{
 		font-size: 30px;
@@ -265,9 +266,12 @@ label{
 	padding: 0 15px;
 	border: #000 solid 2px;
 }
+
 @media (max-width: 1200px){
 	.container{
 		max-width: 970px;
+	}
+		
 	}
 }
 @media (max-width: 992px){
@@ -298,10 +302,11 @@ label{
 
 #work-with-section .grid-work-with{
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	/* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
+	/* grid-template-columns: 1fr 1fr 1fr; */
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 	justify-items: center;
 	grid-column-gap: 2rem;
-
 	align-items: center;
 }
 
