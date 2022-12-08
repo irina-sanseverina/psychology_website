@@ -5,32 +5,30 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
-	
+	/* font-family: Arial, Helvetica, sans-serif; */
 }
+
 #main-section{
 	position: relative;
 	width: 100%;
 	height: 100%;
-	display: flex;
-	flex-direction: column;
 	min-height: 100vh;
-	justify-content: flex-start;
-	background: url('') no-repeat;
-	;
-	/* background-color: lightgray; */
+	background-color: #ecf9fc;
+	background-image: url('/psychology_website/Img/last_one_1.png');
+	background-repeat: no-repeat;
+	background-position:right;
 	background-size: cover;
-	background-position: center;
 }
 
 header {
 	position: relative;
 	top: 0;
 	width: 100%;
-	padding: 30px 100px;
+	padding: 30px 30px;
+	
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	}
+	flex-direction: row-reverse;
+}
 header .logo{
 	position: relative;
 	font-size: 30px;
@@ -44,31 +42,40 @@ header .logo{
 header .navigation a{
 	color: #581845;
 	text-decoration: none;
-	padding: 5px 15px;
-	border-radius: 15px;
+	padding: 10px;
+	margin: 0 30px;
+	/* border-radius: 15px; */
 	font-weight: 800;
 	letter-spacing: 1px;
 	transition: 0.3s;
 	transition-property: background;
+	
 	position: relative;
 	top: 0;
+	
 }
-header .navigation a:not(:last-child){
+/* header .navigation a:not(:last-child){
 	margin-right: 30px;
-}
+} */
 header .navigation a:hover {
 	/* background-color: #5FBBFD; */
-	
-	/* border: 1px solid #000; */
-	transition-duration: 500ms;
+	color: #67bdce;	
+	/* transition-duration: 500ms; */
+
 	top: -1px;
-	box-shadow: 0px 0px 5px rgba(3, 2, 44, 0.671);
+	border-bottom: solid 2px #67bdce;
 }
 .content{
 	margin: 70px 50px;
 }
 
 /* анімаційний заголовок */
+
+.content{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 
 .content .info h2{
 	color: rgba(3, 2, 44, 0.671);
@@ -95,7 +102,7 @@ header .navigation a:hover {
 	}
 } */
 .content .info h2 span{
-	color: rgb(179, 164, 231);
+	color: #67bdce;
 	font-size: 50px;
 	font-weight: 600;
 	
@@ -104,8 +111,10 @@ header .navigation a:hover {
 	font-size: 16px;
 	font-weight: 500;
 	margin-bottom: 40px;
+	max-width: 50%;
+	max-height: 100%;
 }
-.content .info-btn{
+/* .content .info-btn{
 	color: #fff;
 	background:#20648F;
 	text-decoration: none;
@@ -114,6 +123,7 @@ header .navigation a:hover {
 	font-size: 15px;
 	letter-spacing: 2px;
 	padding: 10px 20px;
+	margin-bottom: 50px;
 	border-radius: 10px;
 	box-shadow: 0 5px 0px #3c354a;
 	transition-duration: 500ms;
@@ -123,7 +133,7 @@ header .navigation a:hover {
 .content .info-btn:hover{
 	background-color: #18b5a4;
 	top: 2px;
-}
+} */
 
 .media-icons a{
 	position: relative;
@@ -147,7 +157,6 @@ label{
 }
 
 
-
 /* Responsive style */
 
 
@@ -157,13 +166,15 @@ label{
 	}
 	label{
 		display: block;
-		font-size: 25px;
+		font-size: 30px;
 		cursor: pointer;
-		transition: 0.3s;
+		transition: 0.5s;
 		transition-property: color;
+		
 	}
 	label:hover{
 			color: #20648F; 
+			
 	}
 	label .close-btn{
 		display: none;
@@ -182,13 +193,15 @@ label{
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		opacity: 0.9;
 		}
 	#check:checked ~ header .navigation a{
 		font-size: 700;
-		margin-right: 0;
+		margin-right: 20px;
 		margin-bottom: 20px;
 		letter-spacing: 2px;
-		text-shadow: 1px 1px 1px #000;
+		text-shadow: 1px 1px 1px rgba(3, 2, 44, 0.671);
+		text-transform: uppercase;
 		}
 	#check:checked ~ header label .menu-btn{
 		display: none;
@@ -235,30 +248,35 @@ label{
 	}
 }
 
+
+
+
+
 #about-section{
 	position: relative;
-	width: 100%;
+	max-width: 100%;
 	/* min-height: 100vh; */
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	background-size: cover;
-	background-position: center;
-	
+	/* background-position: center; */
+	margin: 70px 50px;
 }
 
-#about-section .content h3{
-	margin: 10px;
+#about-section h3{
+	color: rgba(3, 2, 44, 0.671);
+	width: 15%;
+	margin: 5px auto;
 	text-align: center;
 	letter-spacing: 2px;
+	padding: 10px;
+	
 }
-
-
-
-
-
-
-
+#about-section h3:hover{
+	color: grey;
+	/* border-bottom: solid 2px gray; */
+}
 
 .container{
 	max-width: 1200px;
@@ -273,7 +291,7 @@ label{
 	}
 		
 	}
-}
+
 @media (max-width: 992px){
 	.container{
 		max-width: 950;
@@ -289,7 +307,7 @@ label{
 
 
 #work-with-section h3{
-	margin: 10px;
+	/* margin: 10px; */
 	text-align: center;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -297,7 +315,7 @@ label{
 #work-with-section .grid-work-with{
 	/* border: solid #000 1px; */
 	/* margin: 50px; */
-	padding: 30px;
+	padding: 0 30px 30px 30px;
 }
 
 #work-with-section .grid-work-with{
@@ -306,16 +324,24 @@ label{
 	/* grid-template-columns: 1fr 1fr 1fr; */
 	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 	justify-items: center;
-	grid-column-gap: 2rem;
+	grid-column-gap: 1rem;
 	align-items: center;
+	
 }
 
 .image{
 	border-radius: 10px;
 	box-shadow: 5px 0px 10px 1px lightgray;
-	padding: 20px;
+	/* padding: 20px; */
 	margin: 0 auto;
+	/* box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1); */
 	/* align-items: center; */
+	transition: 500ms;
+}
+.image:hover{
+	/* background-color: gold; */
+	transform: scale(1.1);
+	z-index: 2;
 }
 	
 #work-with-section .grid-work-with h4{
@@ -327,29 +353,21 @@ label{
 
 
 
-
-
-
-
-
-
-
-
 /*Блок з ціною*/
-
-
-
-#price-section .price{
-	display: grid;
-	grid-template-columns: 8fr 1fr;
-	padding: 10px;
-}
 
 #price-section h3{
 	margin-top: 50px;
 	text-align: center;
 	letter-spacing: 2px;
 }
+#price-section .price{
+	display: grid;
+	grid-template-columns: 8fr 1fr;
+	padding: 10px;
+	margin: 20px 20px;
+}
+
+
 
 
 
@@ -372,7 +390,7 @@ footer .social-icons{
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 10px;
+	font-size: 15px;
 	letter-spacing: 1px;
 	padding: 20px;
 	word-spacing: 3px;
@@ -389,23 +407,3 @@ footer .social-icons li a{
 	
 	
 }
-/*
-#adress-section .adress .contacts {
-	display: flex;
-	flex-direction: column;
-}
-#adress-section .adress .contacts a{
-	text-decoration: none;
-	color: #fff;
-} 
-#adress-section .adress .contacts-social a{
-	text-decoration: none;
-	color: #fff;
-} 
-#adress-section .adress .contacts, .contacts-social{
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-}
-
- */
